@@ -119,6 +119,8 @@ Add these **repository secrets**: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_S
 
 Create two **environments** under Settings → Environments: `dev`, and `production` with **required reviewers**.
 
+Finally, add the repository **variable** `AZURE_ENABLED=true` (Settings → Variables). Until then, only the validate and test job runs, so forks and fresh clones stay green.
+
 ### 3. Run locally
 
 ```bash

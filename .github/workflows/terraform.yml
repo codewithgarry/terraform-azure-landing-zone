@@ -64,6 +64,8 @@ jobs:
   plan:
     name: plan (${{ matrix.environment }})
     needs: validate
+    # Azure jobs run only once credentials are configured (repository variable AZURE_ENABLED=true).
+    if: vars.AZURE_ENABLED == 'true'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
